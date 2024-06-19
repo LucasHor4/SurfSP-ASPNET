@@ -1,8 +1,65 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+	ViewData["Title"] = "SurfSP";
+	Layout = null;
 }
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-image: url('~/Imagens/fundo.png');
+			align-content: center;
+			align-items: center;
+		}
+
+		.logoInicial {
+			border-radius: 50px;
+			width: 400px;
+			height: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 90px;
+		}
+		.btnMudarTela{
+			background-color: dodgerblue;
+			border-radius: 30px;
+			margin: 0 auto;
+			margin-top: 50px;
+			align-content: center;
+			display: block;
+			width: 450px;
+			height: 40px;
+			font-size: large;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<img src="~/Imagens/logosf.png" class="logoInicial" />
+
+		<button class="btnMudarTela">
+			<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Tipos de Ondas(ainda
+				não desenvolvido)</a>
+		</button>
+
+		<button class="btnMudarTela">
+			<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Praias em SP</a>
+		</button>
+
+	</div>
+
+	<!--<script src="~/js/praias.js"></script>-->
+</body>
+
+</html>
