@@ -25,6 +25,7 @@ namespace SurfSP_web.Controllers
 
         public IActionResult Praias()
         {
+            
             return View();
         }
 

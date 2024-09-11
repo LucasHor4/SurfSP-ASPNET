@@ -6,5 +6,7 @@
         public string nomePraia { get; set; }
         public string descricaoPraia { get; set; }
         public int idioma { get; set; }
+
+        publ
     }
 }
