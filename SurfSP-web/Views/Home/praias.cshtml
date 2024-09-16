@@ -1,4 +1,4 @@
-﻿@model SurfSP_web.Models.Praias
+﻿@model List<Praias>
 @{
 	ViewData["Title"] = "SurfSP";
 	Layout = null;
@@ -26,17 +26,17 @@
     </div>
 
     <section id="cont">
-        @foreach(var Praia in Praias)
+        @foreach(var praia in Model)
         {
             <div class="cardPraia" onclick="contHeight(this)">
-                <img src="@Model.imgPraia" class="imgPraia" />
-                <span class="nomePraia">@Model.nomePraia</span>
+                <img src="@praia.imgPraia" class="imgPraia" />
+                <span class="nomePraia">@praia.nomePraia</span>
                 <div class="texto">
-                    <p>@Model.descricaoPraia</p>
+                    <p>@praia.descricaoPraia</p>
                 </div>
             </div>
         }
-
+        
         <div class="cardPraia" onclick="contHeight(this)">
             <img src="~/Imagens/uba.png" class="imgPraia" />
             <span class="nomePraia">Ubatuba</span>

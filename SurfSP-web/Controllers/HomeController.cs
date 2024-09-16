@@ -25,21 +25,15 @@ namespace SurfSP_web.Controllers
 
         public IActionResult Praias()
         {
-            /* List<Praias> listaDePraias = new List<Praias>
+            List<Praias> listaDePraias = new List<Praias>
             {
-                new Praias(1,"Teste","tettttttttt","~/Imagens/uba.png")
-            }; */
-            var Praias = new Praias
-            {
-                idPraia = 4,
-                nomePraia = "string.Empty",
-                descricaoPraia = "string.Empty",
-                imgPraia = "string.Empty",
+                // new Praias{idPraia = 1, nomePraia = "teste", descricaoPraia = "testandooo", imgPraia = "~/Imagens/uba.png"},
+                new Praias(2,"nome","desc","~/Imagens/uba.png"),
+                new Praias(3,"nome","desc","~/Imagens/uba.png"),
+
             };
 
-
-
-            return View();
+            return View(listaDePraias);
         }
 
 		public IActionResult Ondas()
