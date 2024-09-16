@@ -5,8 +5,14 @@
         public int idPraia {  get; set; }
         public string nomePraia { get; set; }
         public string descricaoPraia { get; set; }
-        public int idioma { get; set; }
+        public string imgPraia { get; set; }
 
-        publ
+        public Praias(int idPraia, string nomePraia, string descricaoPraia, string imgPraia)
+        {
+            idPraia = 0;
+            nomePraia = string.Empty;
+            descricaoPraia = string.Empty;
+            imgPraia = string.Empty;
+        }
     }
 }

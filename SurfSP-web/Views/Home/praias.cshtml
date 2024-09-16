@@ -1,7 +1,9 @@
-﻿@{
+﻿@model SurfSP_web.Models.Praias
+@{
 	ViewData["Title"] = "SurfSP";
 	Layout = null;
 }
+
 
 
 <!DOCTYPE html>
@@ -11,7 +13,6 @@
     <link rel="stylesheet" href="~/css/praias.css">
     <title>Praias em SP</title>
 </head>
-
 <body>
     <div id="topo">
         <div class="cxtexto">
@@ -25,6 +26,17 @@
     </div>
 
     <section id="cont">
+        @foreach(var Praia in Praias)
+        {
+            <div class="cardPraia" onclick="contHeight(this)">
+                <img src="@Model.imgPraia" class="imgPraia" />
+                <span class="nomePraia">@Model.nomePraia</span>
+                <div class="texto">
+                    <p>@Model.descricaoPraia</p>
+                </div>
+            </div>
+        }
+
         <div class="cardPraia" onclick="contHeight(this)">
             <img src="~/Imagens/uba.png" class="imgPraia" />
             <span class="nomePraia">Ubatuba</span>
