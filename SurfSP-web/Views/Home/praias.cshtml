@@ -1,7 +1,13 @@
 ﻿@model List<Praias>
 @{
-	ViewData["Title"] = "SurfSP";
-	Layout = null;
+    ViewData["Title"] = "SurfSP";
+    Layout = null;
+
+    var listaDePraias = new List<Praias>
+    {
+        new Praias(2,"nome","desc","~/Imagens/uba.png"),
+    };   
+
 }
 
 
@@ -26,7 +32,7 @@
     </div>
 
     <section id="cont">
-        @foreach(var praia in Model)
+        @foreach(var praia in listaDePraias)
         {
             <div class="cardPraia" onclick="contHeight(this)">
                 <img src="@praia.imgPraia" class="imgPraia" />

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SurfSP_web.Models;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SurfSP_web.Controllers
 {
@@ -25,15 +26,7 @@ namespace SurfSP_web.Controllers
 
         public IActionResult Praias()
         {
-            List<Praias> listaDePraias = new List<Praias>
-            {
-                // new Praias{idPraia = 1, nomePraia = "teste", descricaoPraia = "testandooo", imgPraia = "~/Imagens/uba.png"},
-                new Praias(2,"nome","desc","~/Imagens/uba.png"),
-                new Praias(3,"nome","desc","~/Imagens/uba.png"),
-
-            };
-
-            return View(listaDePraias);
+            return View();
         }
 
 		public IActionResult Ondas()
