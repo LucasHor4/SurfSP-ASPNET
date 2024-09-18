@@ -1,4 +1,6 @@
-﻿namespace SurfSP_web.Models
+﻿using System.Runtime.InteropServices;
+
+namespace SurfSP_web.Models
 {
     public class Praias
     {
@@ -7,12 +9,12 @@
         public string descricaoPraia { get; set; }
         public string imgPraia { get; set; }
 
-        public Praias(int idPraia, string nomePraia, string descricaoPraia, string imgPraia)
-        {
-            idPraia = 0;
-            nomePraia = string.Empty;
-            descricaoPraia = string.Empty;
-            imgPraia = string.Empty;
-        }
+        //public Praias(int idPraia, string nomePraia, string descricaoPraia, string imgPraia)
+        //{
+        //    idPraia = String;
+        //    nomePraia = nomePraia;
+        //    descricaoPraia = descricaoPraia;
+        //    imgPraia = imgPraia;
+        //}
     }
 }

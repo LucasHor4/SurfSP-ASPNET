@@ -1,12 +1,15 @@
-﻿@model List<Praias>
+﻿@model List<Praias> 
 @{
     ViewData["Title"] = "SurfSP";
     Layout = null;
-
     var listaDePraias = new List<Praias>
     {
-        new Praias(2,"nome","desc","~/Imagens/uba.png"),
-    };   
+        // new Praias(/**/
+        //     idPraia = 2,"nome","desc","~/Imagens/uba.png"),
+        // new Praias(2,"nome","desc","~/Imagens/uba.png"),
+
+    };
+    
 
 }
 
@@ -26,13 +29,13 @@
         </div>
         <div class="icon">
             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
-            <img src="~/Imagens/home.png" class="home" />
+                <img src="~/Imagens/home.png" class="home" />
             </a>
         </div>
     </div>
 
     <section id="cont">
-        @foreach(var praia in listaDePraias)
+        @foreach (var praia in listaDePraias)
         {
             <div class="cardPraia" onclick="contHeight(this)">
                 <img src="@praia.imgPraia" class="imgPraia" />
@@ -42,7 +45,7 @@
                 </div>
             </div>
         }
-        
+
         <div class="cardPraia" onclick="contHeight(this)">
             <img src="~/Imagens/uba.png" class="imgPraia" />
             <span class="nomePraia">Ubatuba</span>

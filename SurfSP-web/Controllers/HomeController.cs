@@ -23,13 +23,31 @@ namespace SurfSP_web.Controllers
         {
             return View();
         }
-
+        
         public IActionResult Praias()
         {
+            Praias praiaGuaruja = new Praias()
+            {
+                idPraia = 2,
+                nomePraia = "Guaruja",
+                descricaoPraia = "Um destino imperdível para surfistas de todos os níveis é Praia Grande, em Ubatuba." +
+                       "É reconhecido por suas ondas consistentes e acessíveis. É uma excelente área para surfe," +
+                       "principalmente de setembro a fevereiro, quando as ondas são mais suaves e ideais para " +
+                    "iniciantes e intermediários.  Além de ser um local popular para o surf, a Praia Grande também " +
+                    "é conhecida por sua atmosfera animada e paisagens de tirar o fôlego, o que a torna uma das praias " +
+                    "mais populares de Ubatuba. Ideal para exercícios como caminhadas e corridas na areia, é também um ótimo " +
+                    "lugar para desfrutar e admirar o sol.",
+                imgPraia = "~/Imagens/uba.png"
+            };
+            return View(praiaGuaruja);
+        }
+        [HttpPost]
+        public IActionResult Praias()
+        { 
             return View();
         }
 
-		public IActionResult Ondas()
+            public IActionResult Ondas()
 		{
 			return View();
 		}
