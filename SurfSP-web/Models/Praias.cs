@@ -11,7 +11,7 @@ namespace SurfSP_web.Models
 
         //public Praias(int idPraia, string nomePraia, string descricaoPraia, string imgPraia)
         //{
-        //    idPraia = String;
+        //    idPraia = idPraia;
         //    nomePraia = nomePraia;
         //    descricaoPraia = descricaoPraia;
         //    imgPraia = imgPraia;
