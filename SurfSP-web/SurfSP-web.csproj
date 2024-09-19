@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Imagens\" />
+    <Folder Include="wwwroot\Imagens\imgOndas\" />
   </ItemGroup>
 
 </Project>

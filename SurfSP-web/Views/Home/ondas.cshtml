@@ -1,6 +1,7 @@
-﻿@{
-	ViewData["Title"] = "SurfSP";
-	Layout = null;
+﻿@model List<Ondas>
+@{
+    ViewData["Title"] = "SurfSP";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -9,37 +10,76 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="~/css/praias.css">
     <title>Tipos de Onda</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-		.btnMudarTela {
-			background-color: dodgerblue;
-			border-radius: 30px;
-			margin: 0 auto;
-			margin-top: 50px;
-			align-content: center;
-			display: block;
-			width: 80%;
-			height: 100px;
-			font-size: large;
-			text-decoration: none;
-			border: 0;
-		}
-
-	</style>
 </head>
 
 <body>
 
-    <button class="btnMudarTela">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">A página ou função ainda não foi implementada!
-            Aperte no texto para voltar.
-        </a>
-    </button>
+    <div id="topo">
+        <div class="cxtexto">
+            <input type="text" placeholder="Pesquisar por ondas">
+        </div>
+        <div class="icon">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Imagens/home.png" class="home" />
+            </a>
+        </div>
+    </div>
+
+    <section id="cont">
+
+        <div class="cardPraia" onclick="contHeight(this)">
+            <img src="~/Imagens/ilc.png" class="imgPraia"/>
+            <span class="nomePraia">@Model[0].nomeOnda</span>
+            <div class="texto">
+                <p>
+                    @Model[0].descricaoOnda
+                </p>
+            </div>
+        </div>
+
+        <div class="cardPraia" onclick="contHeight(this)">
+            <img src="~/Imagens/reefBreak.jpg" class="imgPraia"/>
+            <span class="nomePraia">@Model[1].nomeOnda</span>
+            <div class="texto">
+                <p>
+                    @Model[1].descricaoOnda
+                </p>
+            </div>
+        </div>
+
+        <div class="cardPraia" onclick="contHeight(this)">
+            <img src="~/Imagens/poiBreak.jpg" class="imgPraia"/>
+            <span class="nomePraia">@Model[2].nomeOnda</span>
+            <div class="texto">
+                <p>
+                    @Model[2].descricaoOnda
+                </p>
+            </div>
+        </div>
+
+        <div class="cardPraia" onclick="contHeight(this)">
+            <img src="~/Imagens/Crumbly.jpeg" class="imgPraia"/>
+            <span class="nomePraia">@Model[3].nomeOnda</span>
+            <div class="texto">
+                <p>
+                    @Model[3].descricaoOnda
+                </p>
+            </div>
+        </div>
+
+        <div class="cardPraia" onclick="contHeight(this)">
+            <img src="~/Imagens/Tube.jpeg" class="imgPraia"/>
+            <span class="nomePraia">@Model[4].nomeOnda</span>
+            <div class="texto">
+                <p>
+                    @Model[4].descricaoOnda
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="~/js/praias.js"></script>
 
 </body>
 </html>

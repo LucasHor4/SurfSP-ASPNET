@@ -37,12 +37,12 @@ namespace SurfSP_web.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Praias()
         {
             List<Praias> listaDePraias = new List<Praias>
             {
-                new Praias 
+                new Praias
                 {
                     idPraia = 1,
                     nomePraia = "Ubatuba",
@@ -55,7 +55,7 @@ namespace SurfSP_web.Controllers
                                     "lugar para desfrutar e admirar o sol.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 2,
                     nomePraia = "Caraguatatuba",
@@ -70,7 +70,7 @@ namespace SurfSP_web.Controllers
                                     "poderosas em um dos melhores spots do litoral norte de São Paulo!",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 3,
                     nomePraia = "Ihabela",
@@ -85,7 +85,7 @@ namespace SurfSP_web.Controllers
                     ,
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 4,
                     nomePraia = "São Sebastião",
@@ -97,7 +97,7 @@ namespace SurfSP_web.Controllers
                                     "natural de tirar o fôlego com vistas panorâmicas do oceano e das montanhas circundantes.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 5,
                     nomePraia = "Bertioga",
@@ -110,7 +110,7 @@ namespace SurfSP_web.Controllers
                     ,
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 6,
                     nomePraia = "Guarujá",
@@ -123,7 +123,7 @@ namespace SurfSP_web.Controllers
                                     "como passeios de barco, natação e caminhadas na praia." ,
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 7,
                     nomePraia = "Santos",
@@ -136,7 +136,7 @@ namespace SurfSP_web.Controllers
 
                 imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 8,
                     nomePraia = "São Vicente",
@@ -149,7 +149,7 @@ namespace SurfSP_web.Controllers
                                     "vistas panorâmicas da baía de São Vicente além de ser um ponto de descanso.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 9,
                     nomePraia = "Praia Grande",
@@ -161,7 +161,7 @@ namespace SurfSP_web.Controllers
                                     "região.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 10,
                     nomePraia = "Mongaguá",
@@ -174,7 +174,7 @@ namespace SurfSP_web.Controllers
                                    " os amantes do surf!",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 11,
                     nomePraia = "Itanhaém",
@@ -187,7 +187,7 @@ namespace SurfSP_web.Controllers
                                     "setembro a novembro, é a melhor época para encontrar ondas constantes e praias menos movimentadas.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 12,
                     nomePraia = "Peruíbe",
@@ -200,7 +200,7 @@ namespace SurfSP_web.Controllers
                                     "mais à experiência do surfista na região.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 13,
                     nomePraia = "Iguape",
@@ -213,7 +213,7 @@ namespace SurfSP_web.Controllers
                                     "frequentada, possibilitando sessões de surf mais eficientes.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 14,
                     nomePraia = "Ilha Comprida",
@@ -226,7 +226,7 @@ namespace SurfSP_web.Controllers
                                     "específica no surf.",
                     imgPraia = "~/Imagens/uba.png"
                 },
-                new Praias 
+                new Praias
                 {
                     idPraia = 15,
                     nomePraia = "Cananéia",
@@ -241,19 +241,69 @@ namespace SurfSP_web.Controllers
                 },
 
 
-			};
-
+            };
             return View(listaDePraias);
-
         }
-        [HttpPost]
+       
 
         public IActionResult Ondas()
 		{
-			return View();
+            List<Ondas> listaDeOndas = new List<Ondas>
+            {
+                new Ondas
+                {
+                    idOnda = 1,
+                    nomeOnda = "Beach Break",
+                    descricaoOnda = "Beach Break é a onda que quebra no fundo de areia. Esse tipo de bancada muda o tempo todo, " +
+                                    "afinal a areia se movimenta no fundo do mar com a ação da maré, do vento e de outros fatores naturais. " +
+                                    "Por causa dessas mudanças da bancada, esse tipo de onda para surfar se desloca e pode quebrar mais " +
+                                    "longe ou mais perto da costa e em locais diferentes da praia. No Brasil, a grande maioria das nossas" +
+                                    " ondas são Beach Breaks. Elas são bastante indicadas para surfistas iniciantes, por oferecerem um pouco" +
+                                    " mais de segurança na hora da “vaca” (quando você cai da prancha). Por outro lado, surfar um Beach Break " +
+                                    "requer uma boa leitura da onda para saber onde é o pico (melhor lugar para dropar a onda). Ou seja, esteja" +
+                                    " sempre atenta para identificar onde a onda vai quebrar." +
+                                    " Alguns Beach Breaks bastante conhecidos no Brasil são Maresias " +
+                                    "(São Paulo), Cacimba do Padre (Fernando de Noronha) e Itacoatiara (Rio de Janeiro).",
+                    imgOnda = "null",
+                },
+                new Ondas
+                {
+                    idOnda = 2,
+                    nomeOnda = "Reef Break",
+                    descricaoOnda = "Point Break é a onda que quebra no fundo de pedra. Pelo fato das pedras " +
+                    "proporcionarem estabilidade à bancada onde a onda vai quebrar, as características desse tipo" +
+                    " de onda para surfar são mais constantes, isto é, com menos variações do que os Beach Breaks." +
+                    " Surfar em um fundo de pedra pode deixar as surfistas iniciantes um pouco receosas. E não é para menos, " +
+                    "já que bater nas pedras durante a queda realmente pode ser perigoso. Portanto, fica aqui a nossa dica de ouro: procure sempre a ajuda de uma professora de surf que conheça o local. As ondas no fundo de pedra têm o potencial de serem bem mais longas do que as que quebram no fundo de areia. Alguns Point Breaks brasileiros são a Praia da Silveira (Santa Catarina) e o Pontal de Baía Formosa (Rio Grande do Norte).",
+                    imgOnda = "null",
+                },
+                new Ondas
+                {
+                    idOnda = 3,
+                    nomeOnda = "Point Break",
+                    descricaoOnda = "Point Break é a onda que quebra no fundo de pedra. Pelo fato das pedras proporcionarem estabilidade à bancada onde a onda vai quebrar, as características desse tipo de onda para surfar são mais constantes, isto é, com menos variações do que os Beach Breaks. Surfar em um fundo de pedra pode deixar as surfistas iniciantes um pouco receosas. E não é para menos, já que bater nas pedras durante a queda realmente pode ser perigoso. Portanto, fica aqui a nossa dica de ouro: procure sempre a ajuda de uma professora de surf que conheça o local. As ondas no fundo de pedra têm o potencial de serem bem mais longas do que as que quebram no fundo de areia. Alguns Point Breaks brasileiros são a Praia da Silveira (Santa Catarina) e o Pontal de Baía Formosa (Rio Grande do Norte).",
+                    imgOnda = "null",
+                },
+                new Ondas
+                {
+                    idOnda = 4,
+                    nomeOnda = "Crumbly",
+                    descricaoOnda = "Este tipo de onda não é muito forte, são ideais para quem está aprendendo a surfar. Isso se deve ao fato de não serem muito íngremes e nem muito rápidas. Além disso, são ótimas para os surfistas mais experientes, pois a face delas é ideal para praticar manobras e se aperfeiçoar.",
+                    imgOnda = "null",
+                },
+                new Ondas
+                {
+                    idOnda = 5,
+                    nomeOnda = "Tube",
+                    descricaoOnda = "A onda tipo tubo é uma onda oca, e é a mais procurada pelos surfistas. Quem já teve a oportunidade de surfar em uma delas sempre descreve como uma experiência incrível, estar rodeado pela água ao mesmo tempo em que continua se movendo pela onda. Para os iniciantes, o melhor é ficar longe delas. O ideal é continuar ganhando experiência em ondas mais fáceis para depois tentar a sorte em um tubo.",
+                    imgOnda = "null",
+                }
+
+            };
+            return View(listaDeOndas);
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
